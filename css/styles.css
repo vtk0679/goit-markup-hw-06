@@ -824,6 +824,9 @@ img {
   border-radius: 4px;
   margin-bottom: 10px;
   padding-left: 42px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
 
   transition: border-color 250ms var(--main-animation);
 }
