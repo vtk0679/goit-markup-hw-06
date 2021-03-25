@@ -933,6 +933,10 @@ img {
   fill: var(--accent-color);
 }
 
+.checkbox:focus-visible + .icon-checkbox {
+  outline: 2px solid black;
+}
+
 .checkbox {
   position: absolute;
   clip: rect(0 0 0 0);
