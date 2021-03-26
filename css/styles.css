@@ -720,6 +720,7 @@ img {
   left: 0;
   height: 100%;
   width: 100%;
+  visibility: visible;
 
   transition: opacity 250ms var(--main-animation);
 
@@ -730,9 +731,8 @@ img {
   opacity: 0;
   pointer-events: none;
 
-  /* visibility: hidden;
-  transition: opacity 250ms var(--main-animation), transform 250ms var(--main-animation),
-    visibility 1ms linear 250ms; */
+  visibility: hidden;
+  transition: opacity 250ms var(--main-animation), visibility 1ms linear 250ms;
 }
 
 .backdrop.is-hidden .modal {
@@ -801,21 +801,10 @@ img {
 
 .input-box {
   position: relative;
-  display: block;
 }
 
 .form-input-block {
-  display: block;
   margin-bottom: 10px;
-}
-
-.modal-svg {
-  position: absolute;
-  bottom: 20px;
-  left: 12px;
-  transition: fill 250ms var(--main-animation);
-
-  fill: var(--title-text-color);
 }
 
 .input-box-modal-svg {
