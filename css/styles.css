@@ -791,12 +791,6 @@ img {
 }
 
 .label {
-  position: relative;
-  display: block;
-}
-
-.label > span,
-.label-comment > span {
   display: block;
   margin-bottom: 4px;
 
@@ -805,15 +799,37 @@ img {
   letter-spacing: 0.01em;
 }
 
+.input-box {
+  position: relative;
+  display: block;
+}
+
+.form-input-block {
+  display: block;
+  margin-bottom: 10px;
+}
+
 .modal-svg {
   position: absolute;
   bottom: 20px;
   left: 12px;
+  transition: fill 250ms var(--main-animation);
 
   fill: var(--title-text-color);
 }
 
-.modal-input:focus + .modal-svg {
+.input-box-modal-svg {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translate(0, -50%);
+  transition: fill 250ms var(--main-animation);
+
+  fill: var(--title-text-color);
+}
+
+.modal-input:focus + .modal-svg,
+.modal-input:focus + .input-box-modal-svg {
   fill: var(--accent-color);
 }
 
@@ -822,7 +838,6 @@ img {
   height: 40px;
   border: var(--border-modal-inputs);
   border-radius: 4px;
-  margin-bottom: 10px;
   padding-left: 42px;
   font-size: 12px;
   line-height: 1.17;
@@ -836,7 +851,7 @@ img {
   border-color: var(--accent-color);
 }
 
-.label-comment > textarea {
+.form-input-block > textarea {
   width: 100%;
   height: 120px;
   border: var(--border-modal-inputs);
@@ -849,14 +864,10 @@ img {
 
   transition: border-color 250ms var(--main-animation);
 }
-.label-comment > textarea:focus {
+
+.form-input-block > textarea:focus {
   outline: none;
   border-color: var(--accent-color);
-}
-
-.label-comment {
-  display: block;
-  margin-bottom: 20px;
 }
 
 .label-comment > textarea::placeholder {
