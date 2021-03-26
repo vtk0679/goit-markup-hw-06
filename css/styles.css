@@ -901,7 +901,7 @@ img {
 .button-submit {
   display: block;
   padding: 10px 56px;
-  margin-left: 124px;
+  margin: auto;
   border: none;
   border-radius: 4px;
   font-weight: 700;
