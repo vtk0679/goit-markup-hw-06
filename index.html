@@ -412,57 +412,67 @@
           </button>
           <p>Оставьте свои данные, мы вам перезвоним</p>
           <form class="form-call-back">
-            <label class="label">
-              <span>Имя</span>
-              <input
-                type="text"
-                name="name"
-                placeholder=" "
-                class="modal-input"
-                minlength="3"
-                required
-                autocomplete="off"
-              />
-              <svg width="18px" height="18px" class="modal-svg">
-                <use href="./images/icons/sprite.svg#icon-person"></use>
-              </svg>
+            <div class="form-input-block">
+              <label class="label">Имя</label>
+              <div class="input-box">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder=" "
+                  class="modal-input"
+                  minlength="3"
+                  required
+                  autocomplete="off"
+                />
+                <svg width="18px" height="18px" class="input-box-modal-svg">
+                  <use href="./images/icons/sprite.svg#icon-person"></use>
+                </svg>
+              </div>
+            </div>
+
+            <label class="form-input-block">
+              <span class="label">Телефон</span>
+              <span class="input-box">
+                <input
+                  type="tel"
+                  name="tel"
+                  placeholder=" "
+                  class="modal-input"
+                  pattern="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$"
+                  autocomplete="off"
+                  title="8(0XX)XXX-XX-XX"
+                />
+                <svg width="18px" height="18px" class="input-box-modal-svg">
+                  <use href="./images/icons/sprite.svg#icon-phone"></use>
+                </svg>
+              </span>
             </label>
 
-            <label class="label">
-              <span>Телефон</span>
-              <input
-                type="tel"
-                name="tel"
-                placeholder=" "
-                class="modal-input"
-                pattern="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$"
-                autocomplete="off"
-                title="8(0XX)XXX-XX-XX"
-              />
-              <svg width="18px" height="18px" class="modal-svg">
-                <use href="./images/icons/sprite.svg#icon-phone"></use>
-              </svg>
+            <label class="form-input-block">
+              <span class="label">Почта</span>
+              <span class="input-box">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder=" "
+                  class="modal-input"
+                  required
+                  autocomplete="off"
+                />
+                <svg width="18px" height="18px" class="input-box-modal-svg">
+                  <use href="./images/icons/sprite.svg#icon-email"></use>
+                </svg>
+              </span>
             </label>
 
-            <label class="label">
-              <span>Почта</span>
-              <input
-                type="email"
-                name="email"
-                placeholder=" "
-                class="modal-input"
-                required
-                autocomplete="off"
-              />
-              <svg width="18px" height="18px" class="modal-svg">
-                <use href="./images/icons/sprite.svg#icon-email"></use>
-              </svg>
-            </label>
-
-            <label class="label-comment">
-              <span>Комментарий</span>
-              <textarea name="comment" placeholder="Введите текст"></textarea>
-            </label>
+            <div class="form-input-block">
+              <label class="label" for="comment">Комментарий</label>
+              <textarea
+                name="comment"
+                placeholder="Введите текст"
+                id="comment"
+              ></textarea>
+            </div>
 
             <label for="checkbox" class="license-block">
               <input type="checkbox" id="checkbox" class="checkbox" />
